@@ -157,11 +157,14 @@ public class MainActivity extends AppCompatActivity {
                         String ten = object.getString("name");
                         User user = new User(id,ten);
                         listUser.add(user);
+
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
-                adapter.notifyDataSetChanged();
+               // adapter.notifyDataSetChanged();
+                adapter = new RecycleViewAdapter(MainActivity.this, listUser);
+                recyclerView.setAdapter(adapter);
             }
         }, new Response.ErrorListener() {
             @Override

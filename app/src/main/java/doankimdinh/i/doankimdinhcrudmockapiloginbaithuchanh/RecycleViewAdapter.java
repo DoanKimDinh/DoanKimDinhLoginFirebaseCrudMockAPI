@@ -145,7 +145,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
             @Override
             public void onResponse(String response) {
                 Toast.makeText(context, "Thành công", Toast.LENGTH_SHORT).show();
-                dataList.clear();
+
                 getAllUser();
             }
         }, new Response.ErrorListener() {
@@ -159,7 +159,6 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
                     throws AuthFailureError {
                 HashMap<String, String> params = new HashMap<>();
                 params.put("name", ten);
-
                 return params;
             }
         };
@@ -172,19 +171,19 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, "https://5fd5d9ba66125e0016500962.mockapi.io/People", null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-
+                dataList.clear();
                 for (int i =0;i<response.length();i++){
                     try {
                         JSONObject object = response.getJSONObject(i);
                         String id = object.getString("id");
                         String ten = object.getString("name");
                         User user = new User(id,ten);
-                        list.add(user);
+                        dataList.add(user);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
-                dataList = list;
+                //dataList = list;
                 notifyDataSetChanged();
             }
         }, new Response.ErrorListener() {
