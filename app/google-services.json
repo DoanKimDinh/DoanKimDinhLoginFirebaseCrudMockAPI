@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "266000172560",
+    "project_id": "doankimdinh-login-authencation",
+    "storage_bucket": "doankimdinh-login-authencation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266000172560:android:ee0e2d853b62f1482dec95",
+        "android_client_info": {
+          "package_name": "doankimdinh.i.doankimdinhcrudmockapiloginbaithuchanh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266000172560-nva05jitvskebl4b1ueraoqce68i62e3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-gNIZk4eTc21RshM386epuTJ8Psp3U8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266000172560-nva05jitvskebl4b1ueraoqce68i62e3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
